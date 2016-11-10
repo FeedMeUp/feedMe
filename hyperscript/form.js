@@ -8,5 +8,5 @@ h('div#form',
     h('input', {type: "text", placeholder: "Quantity"}),
     h('input', {type: "text", placeholder: "Date"}),
     h('input', {type: "text", placeholder: "Pick Up Address"}),
-    h('input', {type: "submit", value: "Submit"}),
+    h('input', {type: "submit", value: "Submit"})]
   ))
