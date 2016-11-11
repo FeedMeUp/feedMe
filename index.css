@@ -25,7 +25,7 @@ button {
 }
 
 button:hover {
-  background-color: #bfbfbf;
+  background-color: #cccccc;
   top: -5px;
 }
 
@@ -33,4 +33,47 @@ h1 {
   font-family: 'Shrikhand', cursive;
   font-size: 55px;
   color: 	#262626;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+input {
+  width: 450px;
+  height: 100px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #262626;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+
+.formButton {
+  width: 150px;
+  height: 70px;
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+table {
+  width: 85%;
+  color: #262626;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  margin-top: 50px;
+  padding-left: 15%;
+}
+
+tr {
+  background-color: white;
+}
+
+img {
+  width: 150px;
+  height: 150px;
 }
