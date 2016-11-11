@@ -1,3 +1,36 @@
+body {
+  background-color: #ff4d4d;
+}
+
 main {
   text-align: center;
+}
+
+#homepage {
+  margin-top: 17%;
+}
+
+button {
+  width: 250px;
+  height: 100px;
+  background-color: white;
+  border: 3px solid #262626;
+  color: #262626;
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px;
+  transition: 0.1s all ease-in-out;
+  position: relative;
+}
+
+button:hover {
+  background-color: #bfbfbf;
+  top: -5px;
+}
+
+h1 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 55px;
+  color: 	#262626;
 }
