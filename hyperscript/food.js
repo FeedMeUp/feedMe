@@ -3,7 +3,7 @@ var h = require('hyperscript')
 module.exports =
 function (back, foodData) {
   return h('div#form', [
-    h('button', {type: 'submit', onclick: back}, 'back'),
+    h('button.formButton', {type: 'submit', onclick: back}, 'back'),
     h('table',
       foodData.unclaimedFood.map(function(food){
         console.log(food);
