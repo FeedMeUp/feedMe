@@ -3,7 +3,7 @@ var h = require('hyperscript')
 module.exports =
 function (back) {
   return h('div#form', [
-    h('form', [
+    h('form', {method: 'POST', action:'https://feedmeapi.herokuapp.com/api/v1/food'}, [
       h('input', {type: 'text', name: 'companyName', placeholder: 'Company Name'}),
       h('input', {type: 'text', name: 'logo', placeholder: 'Logo link'}),
       h('input', {type: 'text', name: 'item', placeholder: 'Item'}),
