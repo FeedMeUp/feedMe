@@ -1,16 +1,20 @@
 var h = require('hyperscript')
 
 module.exports =
-function (back, getFood) {
+function (back, foodData) {
   return h('div#form', [
     h('button', {type: 'submit', onclick: back}, 'back'),
-    h('form', [
-      h('input', {type: 'text', placeholder: 'FOOD'}),
-      h('input', {type: 'text', placeholder: 'Item'}),
-      h('input', {type: 'text', placeholder: 'Quantity'}),
-      h('input', {type: 'text', placeholder: 'Date'}),
-      h('input', {type: 'text', placeholder: 'Pick Up Address'}),
-      h('button#submit', {type: 'submit', onclick: getFood()}, 'Submit')
-    ])
+    h('table',
+      foodData.unclaimedFood.map(function(food){
+        console.log(food);
+        return h('tr', [
+          h('td', food.companyName),
+          h('td', h('img', {src: food.logo})),
+          h('td', food.item),
+          h('td', food.quantity),
+          h('td', food.pickUpBy),
+          h('td', food.address)
+        ])
+      })),
   ])
 }

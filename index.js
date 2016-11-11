@@ -6,7 +6,7 @@ var h = require('hyperscript')
 var request = require('superagent')
 
 var main = document.querySelector('main')
-var home = homepage(gotToForm, gotToFood)
+var home = homepage(goToForm, goToFood)
 
 function updatePage(newPage) {
     morphdom(main, h('main', {}, newPage))
@@ -14,20 +14,25 @@ function updatePage(newPage) {
 
 updatePage(home)
 
-function gotToForm(){
-  updatePage(form(gotToHomepage))
+function goToForm(){
+  updatePage(form(goToHomepage))
 }
-function gotToFood(){
-  updatePage(food(gotToHomepage, getFood))
-}
-function gotToHomepage(){
-  updatePage(home)
-}
-function getFood(){
-  // e.preventDefault()
+function goToFood(){
   request
-    .get('http://localhost:3000/api/v1/food')
+    .get('https://feedmeapi.herokuapp.com/api/v1/food')
     .end(function(err, res){
       console.log(res.body);
+      updatePage(food(goToHomepage, res.body))
     })
 }
+function goToHomepage(){
+  updatePage(home)
+}
+// function getFood(){
+//   // e.preventDefault()
+//   request
+//     .get('https://feedmeapi.herokuapp.com/api/v1/food')
+//     .end(function(err, res){
+//       console.log(res.body);
+//     })
+// }
