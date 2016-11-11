@@ -34,3 +34,32 @@ h1 {
   font-size: 55px;
   color: 	#262626;
 }
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+input {
+  width: 450px;
+  height: 100px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #262626;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+
+.bottomButtons {
+  display: inline-block;
+}
+
+.formButton {
+  width: 150px;
+  height: 70px;
+  font-size: 25px;
+  float: left;
+}
