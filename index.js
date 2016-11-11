@@ -17,22 +17,21 @@ updatePage(home)
 function goToForm(){
   updatePage(form(goToHomepage))
 }
+// function seeYourFood(formBody){
+//   request
+//     .post('https://feedmeapi.herokuapp.com/api/v1/food')
+//     .send(formBody)
+//     .end(function(err, res){
+//       goToFood()
+//     })
+// }
 function goToFood(){
   request
     .get('https://feedmeapi.herokuapp.com/api/v1/food')
     .end(function(err, res){
-      console.log(res.body);
       updatePage(food(goToHomepage, res.body))
     })
 }
 function goToHomepage(){
   updatePage(home)
 }
-// function getFood(){
-//   // e.preventDefault()
-//   request
-//     .get('https://feedmeapi.herokuapp.com/api/v1/food')
-//     .end(function(err, res){
-//       console.log(res.body);
-//     })
-// }
