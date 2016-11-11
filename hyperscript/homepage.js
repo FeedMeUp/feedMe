@@ -1,8 +1,10 @@
-var h = require("hyperscript")
+var h = require('hyperscript')
 
-module.exports =
-h('div#homepage',
-  h('h1', {}, "Who are you?")
-    [h('input', {type: "submit", value: "I'm a Business!"}),
-    h('input', {type: "submit", value: "I'm Hungry!"})]
-  )
+module.exports = function(business, user){
+return h('div#homepage', [
+          h('h1', 'Who are you?'),
+          h('button', {type: 'submit', onclick: business}, 'I have food!'),
+          h('button', {type: 'submit', onclick: user}, 'I am Hungry!')
+  ]
+)
+}
